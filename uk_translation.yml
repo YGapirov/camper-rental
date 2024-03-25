@@ -1,0 +1,3 @@
+files:
+  - source: /camper-rental/blob/main/README.md
+    translation: camper-rental/%two_letters_code%/%original_file_name%
