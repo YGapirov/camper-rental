@@ -16,9 +16,10 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
+  font-style: normal;
+    color: #101828;
   background-color: silver;
   min-height: 100vh;
   background-image: url(${bgimage});
@@ -31,7 +32,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
