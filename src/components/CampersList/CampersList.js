@@ -14,6 +14,11 @@ import {
   ShowMoreButton,
   ImageContainer,
   FeaturesItem,
+  PriceFavContainer,
+  FavButton,
+  RatingCon,
+  RatingButton,
+  LocationCont,
 } from './CampersList.styled';
 
 export const CampersList = ({ campers }) => {
@@ -37,21 +42,33 @@ export const CampersList = ({ campers }) => {
             <InfoContainer>
               <CamperNamePrice>
                 <CamperTitle>{camper.name}</CamperTitle>
-                <CamperPrice>€{camper.price}</CamperPrice>
+
+                <PriceFavContainer>
+                  <CamperPrice>€{camper.price.toFixed(2)}</CamperPrice>
+                  <FavButton type="button" aria-label="Add to favorites">
+                    <svg width="24" height="24">
+                      <use href={`${sprite}#icon-fav`}></use>
+                    </svg>
+                  </FavButton>
+                </PriceFavContainer>
               </CamperNamePrice>
               <CamperRatingLocation>
-                <button>
+                <RatingCon>
                   <svg fill="#FFC531" width="24" height="24">
                     <use href={`${sprite}#icon-star`}></use>
                   </svg>
-                  {`${camper.rating}(${camper.reviews.length} Reviews)`}
-                </button>
-                <p>
-                  <svg width="24" height="24">
-                    <use href={`${sprite}#icon-pin`}></use>
-                  </svg>
-                  {camper.location}
-                </p>
+                  <RatingButton>
+                    {`${camper.rating}(${camper.reviews.length} Reviews)`}
+                  </RatingButton>
+                </RatingCon>
+                <LocationCont>
+                  <p>
+                    <svg width="16" height="16">
+                      <use href={`${sprite}#icon-pin`}></use>
+                    </svg>
+                    {camper.location}
+                  </p>
+                </LocationCont>
               </CamperRatingLocation>
               <CamperDescription>{camper.description}</CamperDescription>
               <FeaturesList>

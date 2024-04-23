@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
 export const ItemStyle = styled.ul`
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
 `;
 
 export const ListStyle = styled.li`
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   display: flex;
-  align-items: flex-start; // Забезпечує вертикальне вирівнювання елементів на початку контейнера
+
   gap: 24px;
   padding: 24px;
-  width: 100%; // Якщо потрібна фіксована ширина, можете вказати її
+  width: 100%;
   max-height: 358px;
   max-width: 888px;
   border-radius: 20px;
@@ -40,8 +45,7 @@ export const InfoContainer = styled.div`
   width: 526px;
   /* display: flex;
   flex-direction: column;
-  gap: 8px;
-  flex: 1;  */
+  gap: 8px; */
 `;
 
 export const CamperNamePrice = styled.div`
@@ -50,36 +54,10 @@ export const CamperNamePrice = styled.div`
   align-items: center;
   /* width: 100%; */
 `;
-
-export const DetailsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-`;
-
-export const FeaturesList = styled.ul`
+export const PriceFavContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 8px;
-`;
-export const FeaturesItem = styled.li`
-  border-radius: 100px;
-  background: #f2f4f7;
-  padding: 12px 18px;
-
-  mix-blend-mode: multiply;
-`;
-
-export const CamperTitle = styled.h2`
-  font-size: 24px;
-  font-weight: 600;
-`;
-
-export const CamperRatingLocation = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
 `;
 
 export const CamperPrice = styled.p`
@@ -87,11 +65,89 @@ export const CamperPrice = styled.p`
   font-weight: bold;
 `;
 
+export const FavButton = styled.button`
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+  fill: #fff;
+  stroke: black;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: #e44848;
+    stroke: #e44848;
+  }
+
+  /* &:active {
+    fill: #e44848;
+    stroke: #e44848;
+  } */
+`;
+
+export const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const CamperTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+`;
+
+export const CamperRatingLocation = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+`;
+
+export const RatingCon = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+export const RatingButton = styled.button`
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+`;
+
+export const LocationCont = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
 export const CamperDescription = styled.p`
   font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin-bottom: 24px;
+`;
+
+export const FeaturesList = styled.ul`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+`;
+export const FeaturesItem = styled.li`
+  border-radius: 100px;
+  background: #f2f4f7;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
 `;
 
 export const ShowMoreButton = styled.button`
@@ -107,4 +163,9 @@ export const ShowMoreButton = styled.button`
   min-height: 56px;
   color: #fff;
   border: none;
+
+  &:hover,
+  &:focus {
+    background: #d84343;
+  }
 `;
