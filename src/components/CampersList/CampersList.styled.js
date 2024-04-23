@@ -5,6 +5,7 @@ export const ItemStyle = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
+  padding: 15px;
 `;
 
 export const ListStyle = styled.li`
@@ -18,7 +19,7 @@ export const ListStyle = styled.li`
   gap: 24px;
   padding: 24px;
   width: 100%;
-  max-height: 358px;
+  /* max-height: 358px; */
   max-width: 888px;
   border-radius: 20px;
   border: 1px solid rgba(16, 24, 40, 0.2);
@@ -35,14 +36,14 @@ export const ImageContainer = styled.div`
 `;
 
 export const ImageStyle = styled.img`
-  width: 290px; // Змініть розміри згідно з вашими потребами
+  width: 290px;
   height: 310px;
   border-radius: 10px;
   align-self: flex-start; // Вирівнювання зображення зліва
 `;
 
 export const InfoContainer = styled.div`
-  width: 526px;
+  min-width: 375px;
   /* display: flex;
   flex-direction: column;
   gap: 8px; */

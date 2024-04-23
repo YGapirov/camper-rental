@@ -19,7 +19,7 @@ export const Layout = () => {
               <StyledNavLink to="/catalog">Catalog</StyledNavLink>
             </StyledItem>
             <StyledItem>
-              <StyledNavLink to="/favorite">Favorite</StyledNavLink>
+              <StyledNavLink to="/favorites">Favorite</StyledNavLink>
             </StyledItem>
           </List>
         </nav>
